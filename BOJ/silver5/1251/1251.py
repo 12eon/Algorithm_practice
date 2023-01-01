@@ -12,4 +12,3 @@ for i in range(1, length-1):
             result = part
 
 print(result)
-
