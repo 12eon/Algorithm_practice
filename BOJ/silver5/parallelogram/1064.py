@@ -1,5 +1,3 @@
-# 실패
-
 import math
 
 # 거리 계산을 위해서 3개 점 중 2가지 선택 -> 조합
@@ -11,7 +9,6 @@ def combinations(array, r):
         else:
             for next in combinations(array[i+1:], r-1):
                 yield [array[i]] + next
-
 
 # 평행사변형
 point = list(map(int, input().split()))
@@ -35,16 +32,8 @@ def calc_diff(length, point2):
                       + (point2[m][1] - point2[n][1])**2))
         #print(distance[-1])
 
+    lengths = [distance[0]+distance[1], distance[1]+distance[2], +distance[0]+distance[2]]
     # 가장 긴 선으로 만든 길이 - 가장 짧은 선으로 만든 길이
-    return 2*(max(distance) - min(distance))
+    return (max(lengths)*2 - min(lengths)*2)
 
-# 예외
-if point2[1][0] != point2[0][0] and point2[2][0] != point2[1][0]:
-    m1 = (point2[1][1]-point2[0][1]) / (point2[1][0]-point2[0][0])
-    m2 = (point2[2][1]-point2[1][1]) / (point2[2][0]-point2[1][0])
-    if m1 == m2:
-        print(-1.0)
-    else:
-        print(calc_diff(length, point2))
-else:
-    print(calc_diff(length, point2))
+print(calc_diff(length, point2))
