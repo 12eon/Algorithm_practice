@@ -1,6 +1,3 @@
-import heapq
-
-# 우선순위 큐 사용
 def solution(k, tangerine):
     answer = 0
     dt = {}
@@ -9,13 +6,20 @@ def solution(k, tangerine):
             dt[t] = 1
         else:
             dt[t] += 1
-    hq = []
-    for x in dt.keys():
-        heapq.heappush(hq, -dt[x])
 
-    x = 0
-    while x < k:
-        x += -heapq.heappop(hq)
-        answer += 1
+    result = []
+    for x in dt.keys():
+        result.append(dt[x])
+    result.sort(reverse=True)
+
+    i = 0
+    while k > 0:
+        if result[i] <= k:
+            k -= result[i]
+            i += 1
+            answer += 1
+        else:
+            answer += 1
+            break
 
     return answer
