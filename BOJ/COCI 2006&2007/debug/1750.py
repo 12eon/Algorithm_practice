@@ -4,6 +4,7 @@ def square_killer(l, num, values):
     m2, n2 = num[0], num[1]
     for i in range(m2, l+m2):
         for j in range(n2, l+n2):
+            if i == j : continue
             if values[i][j] != values[l-i-1][l-j-1]:
                 return 0 # false
     return l #true
@@ -20,17 +21,12 @@ for i in range(m):
 
 def check(length, m, n, values):
     while length > 1:
-        i = 0
-        while i < m-length+1 :
-            j = 0
-            while j < n-length+1 :
+        for i in range(m-length+1) :
+            for j in range(n-length+1) :
                 candidate = square_killer(length, [i,j], values)
                 if candidate > 0:
                     return candidate
-                j += 1
-            i += 1
         length -= 1
-
     return 1
 
 result = check(length, m, n, values)
