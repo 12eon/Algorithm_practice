@@ -11,3 +11,9 @@ for i in range(2,x+1):
     if i%3==0:
         d[i]=min(d[i],d[i//3]+1)
 print(d[x])
+
+import sys
+import Collection from
+n = int(sys.stdin.readline())
+q = deque([n])
+visited = [0]*(n+1)
