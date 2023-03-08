@@ -1,26 +1,22 @@
-# 시간초과
 import sys
 
 m = int(sys.stdin.readline())
-n = 0
 num = []
 for _ in range(m):
     num.append(int(sys.stdin.readline()))
-    if num[-1] > n:
-        n = num[-1]
 
-d = [0]*(n+1)
-for i in range(1,3):
-    d[i] = i
-end = [[1,0,0],[0,1,0],[1,1,1]]
+n = max(num)
+dp = []
+for _ in range(n+1):
+    dp.append([0,0,0]) # 복사 주의
+dp[1] = [1,0,0]
+dp[2] = [0,1,0]
+dp[3] = [1,1,1]
 
 for i in range(4,n+1):
-    end.append([0]*3)
-    for j in range(3):
-        m = sum(end[j]) - end[j][2-j] # 가능한 개수
-        end[-1][2-j] = m
-        d[i] += m
-    end.pop(0)
+    dp[i][0] = (dp[i-1][1] + dp[i-1][2])%1000000009
+    dp[i][1] = (dp[i-2][0] + dp[i-2][2])%1000000009
+    dp[i][2] = (dp[i-3][0] + dp[i-3][1])%1000000009
 
 for m in num:
-    print(d[m]%1000000009)
+    print(sum(dp[m])%1000000009)
