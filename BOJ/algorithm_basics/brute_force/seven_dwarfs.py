@@ -1,4 +1,5 @@
 import sys
+
 values = []
 for _ in range(9):
     values.append(int(sys.stdin.readline()))
