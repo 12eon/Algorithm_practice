@@ -6,3 +6,6 @@
 
 1074 Z
 - https://www.acmicpc.net/problem/1074
+
+7490 0 만들기
+- https://www.acmicpc.net/problem/7490
