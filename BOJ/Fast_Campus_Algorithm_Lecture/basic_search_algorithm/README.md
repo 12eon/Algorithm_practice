@@ -15,3 +15,6 @@
 
 1236 성 지키기
 - https://www.acmicpc.net/problem/1236
+
+2110 공유기 설치
+- https://www.acmicpc.net/problem/2110
