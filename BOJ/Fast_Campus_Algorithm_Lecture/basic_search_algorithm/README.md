@@ -18,3 +18,6 @@
 
 2110 공유기 설치
 - https://www.acmicpc.net/problem/2110
+
+1939 중량 제한
+- https://www.acmicpc.net/problem/1939
