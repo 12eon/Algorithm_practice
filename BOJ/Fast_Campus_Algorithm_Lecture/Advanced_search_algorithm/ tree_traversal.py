@@ -4,12 +4,12 @@ class Node:
         self.left = left
         self.right = right
 
-def pre(node):
-    print(node.data, end='')
-    if node.left != '.':
-        pre(tree[node.left])
-    if node.right != '.':
-        pre(tree[node.right])
+def pre(n): # node
+    if n.left != '.':
+        pre(root[n.left])
+    if n.right != '.':
+        pre(root[n.right])
+    print(n.data)
 
 def cur(node):
     if node.left != '.':
