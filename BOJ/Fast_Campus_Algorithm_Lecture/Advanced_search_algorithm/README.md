@@ -6,3 +6,6 @@
 
 2250 트리의 높이와 너비
 - https://www.acmicpc.net/problem/2250
+
+1927 최소 힙
+- https://www.acmicpc.net/problem/1927
