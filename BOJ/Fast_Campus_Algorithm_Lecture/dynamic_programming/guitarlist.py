@@ -18,3 +18,5 @@ for i in range(m, -1, -1):
     if cmp[n][i] == 1:
         result = i
         break
+
+print(result)
