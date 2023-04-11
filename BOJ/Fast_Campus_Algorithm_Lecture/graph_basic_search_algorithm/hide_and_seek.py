@@ -1,16 +1,14 @@
-from collections import deque
-MAX = 100001
 n,k = map(int, input().split())
-v = [0]*MAX
 
-def bfs():
-    q = deque([n])
-    while q:
-        now = q.popleft()
-        if now == k:
-            return v[now]
-        for next in (now-1, now+1, now*2):
-            if 0 <= next < MAX and not v[next]:
-                v[next] = v[now]+1
-                q.append(next)
-print(bfs())
+v = [0]*100001
+d = [n]
+while d != []:
+    i = d.pop(0)
+    if i == k:
+        break
+    for j in [i-1, i+1, 2*i]:
+        if 0 <= j < 100001 and not v[j]:
+        # v[j] > 0 : 이미 전에 계산된 값
+            v[j] = v[i]+1
+            d.append(j)
+print(v[k])
