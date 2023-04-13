@@ -1,22 +1,20 @@
+cnt = int(input())
 n = int(input())
-m = int(input())
 
-com = [[] for _ in range(n + 1)]
-visited = [False] * (n + 1)
-count = 0
+d = [[] for _ in range(cnt+1)]
+for _ in range(n):
+    v,w = map(int, input().split())
+    d[w] += [v]
+    d[v] += [w]
 
-for _ in range(m):
-    x, y = map(int, input().split())
-    com[x].append(y)
-    com[y].append(x)
-
-def dfs(now_pos):
-    global count
-    count += 1
-    visited[now_pos] = True
-    for next in com[now_pos]:
-        if not visited[next]:
-            dfs(next)
-
-dfs(1)
-print(count - 1)
+result = 0
+cmp = [0]*(cnt+1)
+def calc(v):
+    global result
+    result += 1
+    cmp[v] = 1
+    for w in d[v]:
+        if cmp[w] == 0:
+            calc(w)
+calc(1)
+print(result-1)
