@@ -6,3 +6,6 @@
 
 1439 뒤집기
 - https://www.acmicpc.net/problem/1439
+
+2012 등수 매기기
+- https://www.acmicpc.net/problem/2012
