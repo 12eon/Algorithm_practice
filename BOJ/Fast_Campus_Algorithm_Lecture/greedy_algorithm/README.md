@@ -9,3 +9,6 @@
 
 2012 등수 매기기
 - https://www.acmicpc.net/problem/2012
+
+1092 배
+- https://www.acmicpc.net/problem/1092
