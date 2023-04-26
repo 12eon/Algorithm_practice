@@ -12,3 +12,6 @@
 
 1092 배
 - https://www.acmicpc.net/problem/1092
+
+2212 센서
+- https://www.acmicpc.net/problem/2212https://www.acmicpc.net/problem/2212
