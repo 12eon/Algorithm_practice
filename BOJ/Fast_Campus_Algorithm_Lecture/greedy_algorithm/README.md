@@ -15,3 +15,6 @@
 
 2212 센서
 - https://www.acmicpc.net/problem/2212https://www.acmicpc.net/problem/2212
+
+1461 도서관
+- https://www.acmicpc.net/problem/1461
