@@ -18,3 +18,6 @@
 
 1461 도서관
 - https://www.acmicpc.net/problem/1461
+
+1781 컵라면
+- https://www.acmicpc.net/problem/1781
