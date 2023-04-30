@@ -1,6 +1,6 @@
 
 def check(x):
-    for i in range(x): # 전에 높은 것
+    for i in range(x): # 전에 놓인 것
         if row[x] == row[i]:# 위쪽
             return False
         if abs(row[x] - row[i]) == x - i: #대각선
@@ -13,10 +13,10 @@ def dfs(x):
     if x == n:
         result += 1
     else:
-        for i in range(n):
+        for i in range(n): # 열 탐색
             row[x] = i
             if check(x):
-                dfs(x + 1) # 다음행
+                dfs(x + 1) # 다음 행
 
 n = int(input())
 row = [0] * n
