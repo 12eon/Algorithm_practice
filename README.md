@@ -17,3 +17,7 @@ lec_algorithm : 알고리즘 수업 과제
  - 자료구조
  - math
  - 동적 프로그래밍
+
+# 코딩테스트
+1. 이것이 코딩 테스트다
+- https://hyeon1212.tistory.com/category/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%9D%B4%EA%B2%83%EC%9D%B4%20%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%8B%A4
