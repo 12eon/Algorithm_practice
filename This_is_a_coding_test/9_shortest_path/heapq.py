@@ -11,8 +11,6 @@ for _ in range(m):
 
 INF = int(1e9)
 d = [INF]*(n+1)
-v = [0]*(n+1)
-
 def dijkstra(start):
     q = []
     heapq.heappush(q, (0,start)) # 거리, 인덱스
@@ -26,7 +24,7 @@ def dijkstra(start):
             cost = d[now]+j[1] # start~자신 + 자신~상대
             if cost < d[j[0]]:
                 d[j[0]] = cost
-                heapq.heappush(q, (cost, i[0])
+                heapq.heappush(q, (cost, j[0]))
 
 dijkstra(start)
 
