@@ -28,6 +28,7 @@ for i in range(e):
     y = find_parent(parent, b)
     if x == y:
         cycle = 1
+
         break
     else:
         union_parent(parent, a, b) # 2개 원소가 속한 집합(가장 작은 인덱스)
