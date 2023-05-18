@@ -1,27 +1,31 @@
 # 위상 정렬
-import deque
+from collections import deque
 
 v,e = map(int, input().split())
-
-INF = int(1e9)
-v = [0]*(v+1)
-d = [[]*(v+1)]
-for _ in e:
+visited = [0]*(v+1)
+cnt = [0]*(v+1)
+d = [[] for i in range(v+1)]
+result = []
+for _ in range(e):
     a,b = map(int, input().split())
     d[a].append(b)
+    cnt[b] += 1 # 도착하는 경우 = 0 -> 시작 노드
 
-cnt = 1
-v[1] = 1
 q = deque([])
-for i in d[1]:
-    q.append(i)
+i = cnt[1:].index(0) + 1
+print(cnt, i)
+q.append(i)
+visited[i] = 1
+result = []
 
 while q:
     value = q.popleft()
-    v[value[0]] = cnt
-    cnt += 1
-    for i in d[value[1]]:
-        if i[0] == 0:
+    #print(value, q)
+    result.append(value)
+    for i in d[value]:
+        if visited[i] == 0:
+            visited[i] = 1
             q.append(i)
 
-print(v)
+for i in result:
+    print(i, end=" ")
