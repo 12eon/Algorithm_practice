@@ -8,8 +8,6 @@ def find_parent(parent, x):
         parent[x] = find_parent(parent, parent[x])
     return x
 
-
-q = []
 for i in range(m):
     a,b,c = map(int, input().split())
     if a == 1:
