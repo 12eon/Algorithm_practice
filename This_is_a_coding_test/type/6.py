@@ -13,13 +13,13 @@ def solution(food_times, k):
 
     previous = 0 # 이전 값
     while h:
-        t = (h[0][0] - previous) * food_num # h[0][0] = 가장 작은 값
+        t = (h[0][0] - previous) * food_num # h[0][0] = 가장 작은 음식 양
         if k >= t:
             k -= t
             previous, _ = heapq.heappop(h)
             food_num -= 1
         else:
             h.sort(key=lambda x: x[1])
-            answer = h[k % food_num][1]
+            answer = h[k % food_num][1] # 음식을 다 먹기 위한 시간보다 k가 큰 경우
             break
     return answer
