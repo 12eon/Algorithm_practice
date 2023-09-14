@@ -1,6 +1,6 @@
 # 모험가 길드 : 공포도가 높은 사람끼리 모으기
 
-n = list(map(int, input().split(''))
+n = list(map(int, input().split('')))
 print(n)
 now = n[0]
 
