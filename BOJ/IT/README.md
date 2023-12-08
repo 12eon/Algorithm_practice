@@ -3,3 +3,6 @@
 
 # 출처
 https://www.acmicpc.net/workbook/view/8708
+
+# 작업
+- 23.12.05
